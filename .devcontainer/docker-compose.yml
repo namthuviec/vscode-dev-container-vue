@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  vue-app:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    volumes:
+      # Mount the project into the container
+      - ..:/app:cached
+      # Keep node_modules inside the container (don’t overwrite with host)
+      - /app/node_modules
+    ports:
+      - "8080:8080"
+    # Use the same user as defined in devcontainer.json
+    user: node
