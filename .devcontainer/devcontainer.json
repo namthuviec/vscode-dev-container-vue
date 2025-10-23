@@ -1,26 +1,27 @@
 {
   "name": "Vue CLI Dev",
-  "dockerFile": "Dockerfile",
-  "context": "..",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "vue-app",
+  "workspaceFolder": "/app",
 
-  // Default container-specific VS Code settings
+  // VS Code settings mặc định trong container
   "settings": {
     "terminal.integrated.defaultProfile.linux": "zsh"
   },
 
-  // Recommended extensions for Vue 3 + ESLint
+  // Các extension khuyên dùng cho Vue 3 + ESLint
   "extensions": [
     "dbaeumer.vscode-eslint",
-    "Vue.volar",              // Modern Vue 3 extension (replaces vetur)
+    "Vue.volar", // thay thế Vetur cho Vue 3
     "Vue.vscode-typescript-vue-plugin"
   ],
 
-  // Forward Vue dev server port
+  // Forward port cho Vue CLI dev server
   "forwardPorts": [8080],
 
-  // Run after container is created
+  // Chạy sau khi container được tạo
   "postCreateCommand": "npm install",
 
-  // Use non-root user for better dev experience
+  // Dùng user "node" thay vì root
   "remoteUser": "node"
 }
