@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  vue-app:
+    volumes:
+      # Mount thư mục debug logs (nếu bạn muốn lưu log riêng)
+      - ./debug:/app/debug
+
+      # Mount cache npm từ host để tăng tốc cài đặt
+      - ~/.npm:/home/node/.npm
+
+      # Nếu dùng Yarn, có thể mount cache Yarn
+      - ~/.cache/yarn:/home/node/.cache/yarn
+
+    environment:
+      # Bật chế độ debug cho Node.js
+      NODE_ENV: development
+      NODE_OPTIONS: --inspect=0.0.0.0:9229
+
+    ports:
+      # Mở thêm port cho Node.js debugger
+      - "9229:9229"
