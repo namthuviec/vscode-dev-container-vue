@@ -5,7 +5,7 @@ FROM mcr.microsoft.com/vscode/devcontainers/javascript-node:18
 RUN npm install -g @vue/cli @vue/cli-service-global http-server
 
 # Set working directory
-WORKDIR /app
+WORKDIR /workspaces/vscode-dev-container-vue
 
 # Copy dependency files first for better caching
 COPY package*.json ./
