@@ -2,7 +2,7 @@
   "name": "Vue CLI Dev",
   "dockerComposeFile": "docker-compose.yml",
   "service": "vue-app",
-  "workspaceFolder": "/app",
+  "workspaceFolder": "/workspaces/vscode-dev-container-vue",
 
   // VS Code settings mặc định trong container
   "settings": {
