@@ -10,7 +10,7 @@
       "restart": true,
       "protocol": "inspector",
       "localRoot": "${workspaceFolder}",
-      "remoteRoot": "/app",
+      "remoteRoot": "/vscode-dev-container-vue",
       "skipFiles": [
         "<node_internals>/**"
       ]
