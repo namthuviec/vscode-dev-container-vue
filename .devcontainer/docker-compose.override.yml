@@ -4,7 +4,7 @@ services:
   vue-app:
     volumes:
       # Mount thư mục debug logs (nếu bạn muốn lưu log riêng)
-      - ./debug:/app/debug
+      - ./debug:/workspaces/vscode-dev-container-vue/debug
 
       # Mount cache npm từ host để tăng tốc cài đặt
       - ~/.npm:/home/node/.npm
