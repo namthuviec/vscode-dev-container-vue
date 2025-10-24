@@ -7,9 +7,9 @@ services:
       dockerfile: .devcontainer/Dockerfile
     volumes:
       # Mount the project into the container
-      - ..:/app:cached
+      - ..:/workspaces/vscode-dev-container-vue:cached
       # Keep node_modules inside the container (don’t overwrite with host)
-      - /app/node_modules
+      - /workspaces/vscode-dev-container-vue/node_modules
     ports:
       - "8080:8080"
     # Use the same user as defined in devcontainer.json
